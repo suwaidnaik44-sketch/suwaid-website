@@ -1,71 +1,59 @@
 {
   "breaking": [
     {
-      "title": "Srinagar Main Breaking News",
-      "desc": "Lal Chowk me security alert jari. Police ne area ko seal kiya.",
+      "title": "MEGA WEATHER ALERT — Tez Baarish aur Barfbaari aglay 48 ghanton mein",
+      "desc": "IMD ne Jammu & Kashmir ke kai ilaqon ke liye aglay 48 ghanton ka strong weather alert jari kar diya hai. Plains par tez baarish aur pahaari ilaqon (Gulmarg, Sonamarg, Kupwara) mein moti barfbaari ka imkaan hai. Local authorities ne rescue teams aur road-clearing squads ko standby par rakha hai. Logon se darkhwast hai ke zaroori saman pehle se tayyar rakhain aur non-essential travel se parhez karein.",
       "time": "Just now",
       "url": ""
     },
     {
-      "title": "Jammu Highway Breaking",
-      "desc": "Jammu–Srinagar highway landslide ke wajah se temporarily band.",
-      "time": "2 min ago",
+      "title": "BORDER SECURITY — Suspicious Drone Movement Near LOC, High Alert",
+      "desc": "LOC ke qareeb security agencies ne raat bhar surveillance mein 2 suspicious drone signatures detect kiye. BSF aur local paramilitary units ne area mein patrols aur radar monitoring barhadi hai. Authorities ne public ko sensitive areas se door rehne ki hidayat di hai. High-level security review chal raha hai — further updates aate hi share ki jayengi.",
+      "time": "15 minutes ago",
+      "url": ""
+    },
+    {
+      "title": "TRAFFIC EMERGENCY — Jammu–Srinagar Highway Temporarily Closed",
+      "desc": "Heavy rainfall ke natije mein Jammu–Srinagar highway par landslide hua jiski wajah se highway ko temporarily band kar diya gaya hai. Traffic officials ne drivers ko alternate routes follow karne aur emergency services se raabta rakhne ki salah di hai. Highway restoration teams ab active hain — estimated reopening time abhi confirm nahi hua.",
+      "time": "20 minutes ago",
       "url": ""
     }
   ],
   "latest": [
     {
-      "title": "Tourist Rush in Gulmarg",
-      "desc": "Baraf girne ke baad Gulmarg me tourist footfall double ho gaya.",
-      "time": "20 min ago",
+      "title": "Srinagar Smart City — 3 Nai Sadkein Khol Di Gayi",
+      "desc": "Srinagar Smart City initiative ke tehat aaj 3 nai sadkein aur smart signaling open ki gayi. Traffic flow mein lagbhag 35% sudhar dekha gaya hai.",
+      "time": "1 hour ago",
       "url": ""
     },
     {
-      "title": "Kashmir Apple Market Rates",
-      "desc": "Aaj market rate update hue; local mandi me fluctuation dekhne ko mili.",
-      "time": "45 min ago",
+      "title": "Tourism Surge — Gulmarg aur Pahalgam Me Booking Increased",
+      "desc": "Tourism boards ke mutabiq Gulmarg aur Pahalgam mein is hafte visitors ki tadaad 60% tak barh gayi hai. Local hotels near-full booking par chal rahe hain.",
+      "time": "2 hours ago",
       "url": ""
     }
   ],
   "weather": [
     {
-      "title": "Snowfall Alert – Gulmarg & Sonamarg",
-      "desc": "Aaj raat se heavy snowfall ka warning jari kiya gaya.",
-      "time": "10:00 AM",
-      "url": ""
-    },
-    {
-      "title": "Srinagar Temperature Drop",
-      "desc": "Minimum temp -3°C record hua subah ke time.",
-      "time": "9:30 AM",
+      "title": "Snowfall Advisory — Gulmarg & Sonamarg",
+      "desc": "IMD ne Gulmarg aur Sonamarg ke liye heavy snowfall advisory jari ki. Travelers se kaha gaya hai ke wo local helplines aur weather updates follow karen.",
+      "time": "Just now",
       "url": ""
     }
   ],
   "jobs": [
     {
-      "title": "JKSSB New Recruitment 2025",
-      "desc": "Clerk, Assistant, Supervisor — total 1800 posts open. Online apply karein.",
+      "title": "JKSSB Jobs Alert — 1200+ Sarkari Posts Expected",
+      "desc": "Jammu & Kashmir administration aglay haftay 1200+ sarkari posts ka notification publish kar sakti hai. Eligible candidates apni documents ready rakhein.",
       "time": "Today",
       "url": "https://jkssb.nic.in/"
-    },
-    {
-      "title": "JKPSC Lecturer Posts",
-      "desc": "Science & Arts stream me 350 vacancies announced. Eligibility details site par.",
-      "time": "Yesterday",
-      "url": "https://jkpsc.nic.in/"
     }
   ],
   "alerts": [
     {
-      "title": "School Winter Vacation Notice",
-      "desc": "Class 1–8 ke liye schools 2 weeks ke liye band.",
-      "time": "Today 9:00 AM",
-      "url": ""
-    },
-    {
-      "title": "Electricity Shutdown – Srinagar",
-      "desc": "Maintenance ke kaaran 3 ghante bijli band rahegi.",
-      "time": "Today 8:30 AM",
+      "title": "School Closure Notice — Winter Vacation Extended",
+      "desc": "Kuch districts mein schools ke liye winter vacation extension ka order jari hua. Parents local school notices check karen.",
+      "time": "Today",
       "url": ""
     }
   ]
