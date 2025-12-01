@@ -10,39 +10,13 @@
 
   gtag('config', 'G-QF4K101LY9');
 </script>
+<!doctype html>
+<html lang="hi">
+<head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>JK Fast News — Breaking • Weather • Jobs • Alerts</title>
-<meta name="description" content="Jammu & Kashmir: Breaking news, weather, jobs, alerts — single file (no external JSON)." />
-<style>
-  :root{--accent:#0b63a6;--muted:#666;--bg:#f5f7fb}
-  *{box-sizing:border-box}
-  body{margin:0;font-family:Inter,system-ui,Arial;color:#111;background:var(--bg);-webkit-font-smoothing:antialiased}
-  .wrap{max-width:980px;margin:12px auto;padding:12px}
-  header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px;background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(2,6,23,0.06)}
-  .brand h1{margin:0;font-size:18px;color:var(--accent)}
-  .muted{color:var(--muted);font-size:13px}
-  .controls{display:flex;gap:8px;align-items:center}
-  .btn{background:var(--accent);color:#fff;border:0;padding:8px 10px;border-radius:8px;cursor:pointer}
-  .grid{display:grid;grid-template-columns:1fr 340px;gap:14px;margin-top:14px}
-  @media(max-width:940px){.grid{grid-template-columns:1fr}}
-  .feed{display:flex;flex-direction:column;gap:12px}
-  .card{background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(12,25,40,0.04)}
-  .card h3{margin:0 0 6px;color:var(--accent);font-size:16px}
-  .card p{margin:0;color:#333;font-size:14px;line-height:1.3}
-  .meta{font-size:12px;color:var(--muted);margin-top:8px}
-  .thumb{width:120px;height:76px;border-radius:8px;overflow:hidden;flex-shrink:0;background:#eee}
-  .row{display:flex;gap:12px;align-items:flex-start}
-  .widget{background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(12,25,40,0.04);margin-bottom:12px}
-  .jobs .job{padding:8px;border-radius:8px;background:#fafbff;margin-bottom:8px}
-  .ad{border:1px dashed #ddd;padding:12px;text-align:center;border-radius:8px;background:#fff}
-  .loadmore{display:block;margin:12px auto;padding:10px 14px;border-radius:10px;background:#111;color:#fff;border:0;cursor:pointer}
-  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-  .tag{background:#fff;padding:6px 8px;border-radius:999px;border:1px solid #eee;font-size:13px}
-  footer{text-align:center;color:var(--muted);font-size:13px;margin:18px 0}
-  a.share{display:inline-block;padding:8px;border-radius:8px;background:#f0f6ff;color:var(--accent);text-decoration:none;margin-right:8px;font-size:13px}
-  .small{font-size:12px;color:var(--muted)}
-</style>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="wrap">
@@ -58,245 +32,44 @@
     </header>
 
     <div class="grid">
-      <!-- LEFT: feed -->
       <main>
-        <div id="topAd" class="ad" style="margin-top:12px">Ad placeholder — replace with AdSense</div>
-
-        <section id="feed" class="feed" aria-live="polite" style="margin-top:12px"></section>
-
+        <div id="topAd" class="ad">Ad placeholder — replace with AdSense</div>
+        <section id="feed" class="feed" aria-live="polite"></section>
         <button id="loadMore" class="loadmore">Load more</button>
       </main>
 
-      <!-- RIGHT: widgets -->
       <aside>
         <div id="weatherWidget" class="widget">
-          <h4 style="margin:0 0 8px">Weather — Srinagar</h4>
+          <h4>Weather — Srinagar</h4>
           <div id="weatherContent" class="muted">Loading weather…</div>
         </div>
 
         <div class="widget">
-          <h4 style="margin:0 0 8px">Jobs • Latest</h4>
+          <h4>Jobs • Latest</h4>
           <div id="jobs" class="jobs muted">Loading jobs…</div>
-          <a id="jobsMore" href="#" class="muted" style="display:block;margin-top:8px">More jobs</a>
+          <a id="jobsMore" href="#" class="muted">More jobs</a>
         </div>
 
         <div class="widget">
-          <h4 style="margin:0 0 8px">Trending</h4>
+          <h4>Trending</h4>
           <div id="trending" class="tags"></div>
         </div>
 
         <div class="widget">
-          <h4 style="margin:0 0 8px">Share</h4>
+          <h4>Share</h4>
           <div>
             <a id="shareX" class="share" href="#" target="_blank">Share on X</a>
             <a id="shareWA" class="share" href="#" target="_blank">Share on WhatsApp</a>
           </div>
         </div>
 
-        <div class="ad" style="margin-top:12px">Side Ad placeholder</div>
+        <div class="ad">Side Ad placeholder</div>
       </aside>
     </div>
 
-    <footer>© <span id="year"></span> JK Fast News — Self-contained single file</footer>
+    <footer>© <span id="year"></span> JK Fast News — Hosted on GitHub Pages</footer>
   </div>
 
-<script>
-/* ================= CONFIG - EDIT HERE =================
-   Agar tum data change karna chahte ho to niche 'EMBEDDED_POSTS' ko edit karo.
-   Weather uses Open-Meteo (no API key). */
-const POLL_MS = 30000; // auto-refresh interval
-
-/* ================= EMBEDDED POSTS (EDIT THIS) =================
-   Structure: breaking, latest, weather, jobs, alerts (arrays)
-   Add url if you want "Read more" link.
-*/
-const EMBEDDED_POSTS = {
-  "breaking": [
-    {"title":"Srinagar Main Breaking News","desc":"Lal Chowk me security alert jari. Police ne area ko seal kiya.","time":"Just now","url":"#"},
-    {"title":"Jammu Highway Breaking","desc":"Jammu–Srinagar highway landslide ke wajah se temporarily band.","time":"2 min ago","url":"#"}
-  ],
-  "latest":[
-    {"title":"Tourist Rush in Gulmarg","desc":"Baraf girne ke baad tourist footfall double ho gaya.","time":"20 min ago","url":"#"},
-    {"title":"Kashmir Apple Market Rates","desc":"Aaj market me rate update hue.","time":"45 min ago","url":"#"}
-  ],
-  "weather":[
-    {"title":"Snowfall Alert – Gulmarg & Sonamarg","desc":"Aaj raat se heavy snowfall ka warning jari kiya gaya.","time":"10:00 AM","url":"#"},
-    {"title":"Srinagar Temperature Drop","desc":"Minimum temp -3°C record hua subah ke time.","time":"9:30 AM","url":"#"}
-  ],
-  "jobs":[
-    {"title":"JKSSB New Recruitment 2025","desc":"Clerk, Assistant, Supervisor — total 1800 posts open.","time":"Today","url":"https://jkssb.nic.in/"},
-    {"title":"JKPSC Lecturer Posts","desc":"Science & Arts stream me 350 vacancies announced.","time":"Yesterday","url":"https://jkpsc.nic.in/"}
-  ],
-  "alerts":[
-    {"title":"School Winter Vacation Notice","desc":"Class 1–8 ke liye schools 2 weeks ke liye band.","time":"Today 9:00 AM","url":"#"},
-    {"title":"Electricity Shutdown – Srinagar","desc":"Maintenance ke kaaran 3 ghante bijli band rahegi.","time":"Today 8:30 AM","url":"#"}
-  ]
-};
-
-/* ================= STATE ================= */
-let mergedFeed = [];
-let shown = 0;
-const PAGE_SIZE = 6;
-
-/* ========== HELPERS ========== */
-function esc(s){ if(!s) return ''; return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[m])); }
-function timeLabel(t){ return t || ''; }
-
-/* ========== BUILD MERGED FEED ========== */
-function buildMerged(){
-  const order = ['breaking','latest','alerts','weather','jobs'];
-  const combined = [];
-  for(const k of order){
-    if(Array.isArray(EMBEDDED_POSTS[k])){
-      for(const p of EMBEDDED_POSTS[k]) combined.push(Object.assign({}, p, {category:k}));
-    }
-  }
-  // dedupe by title
-  const seen = new Set(), out=[];
-  for(const it of combined){
-    const key = (it.title||'').slice(0,120);
-    if(seen.has(key)) continue;
-    seen.add(key);
-    out.push(it);
-  }
-  mergedFeed = out;
-}
-
-/* ========== RENDER CARD ========== */
-function makeCard(item){
-  const div = document.createElement('div');
-  div.className = 'card';
-  div.innerHTML = `
-    <div class="row">
-      <div style="flex:1">
-        <h3>${esc(item.title)}</h3>
-        <p>${esc(item.desc || '')}</p>
-        <div class="meta">${esc(item.category ? item.category.toUpperCase() : '')} • ${timeLabel(item.time || item.publishedAt)}</div>
-        <div style="margin-top:8px"><a href="${item.url||'#'}" target="_blank">Read more</a></div>
-      </div>
-    </div>
-  `;
-  return div;
-}
-
-/* ========== RENDER FEED (PAGED) ========== */
-function renderFeed(reset=false){
-  const feed = document.getElementById('feed');
-  if(reset){ feed.innerHTML=''; shown=0; }
-  const end = Math.min(mergedFeed.length, shown + PAGE_SIZE);
-  for(let i=shown;i<end;i++){
-    const node = makeCard(mergedFeed[i]);
-    feed.appendChild(node);
-    // ad after 4 items
-    if((i+1)%4===0){
-      const ad = document.createElement('div'); ad.className='ad'; ad.textContent='Ad placeholder — replace with AdSense'; feed.appendChild(ad);
-    }
-  }
-  shown = end;
-  document.getElementById('loadMore').style.display = shown>=mergedFeed.length ? 'none' : 'block';
-}
-
-/* ========== RENDER JOBS WIDGET ========== */
-function renderJobs(){
-  const jobsEl = document.getElementById('jobs');
-  jobsEl.innerHTML = '';
-  const list = EMBEDDED_POSTS.jobs || [];
-  if(list.length===0){ jobsEl.textContent='No jobs'; return; }
-  for(const j of list.slice(0,6)){
-    const d = document.createElement('div'); d.className='job';
-    d.innerHTML = `<strong>${esc(j.title)}</strong><div class="small" style="margin-top:6px">${esc(j.desc)}</div><div class="small" style="margin-top:6px">${esc(j.time)}</div><a href="${j.url||'#'}" target="_blank" style="font-size:13px;color:var(--accent);display:block;margin-top:6px">View</a>`;
-    jobsEl.appendChild(d);
-  }
-}
-
-/* ========== TRENDING (simple) ========== */
-function computeTrending(){
-  const text = mergedFeed.slice(0,30).map(i=>i.title||'').join(' ').toLowerCase();
-  const words = text.replace(/[^a-z0-9\s]/g,' ').split(/\s+/).filter(Boolean);
-  const stop = new Set(['the','and','in','of','to','for','a','is','on','with','by','from','jammu','kashmir','srinagar','jk']);
-  const freq = {};
-  for(const w of words){
-    if(w.length<3 || stop.has(w)) continue;
-    freq[w] = (freq[w]||0)+1;
-  }
-  const tags = Object.keys(freq).sort((a,b)=>freq[b]-freq[a]).slice(0,12);
-  const el = document.getElementById('trending'); el.innerHTML='';
-  tags.forEach(t=>{
-    const n = document.createElement('div'); n.className='tag'; n.textContent=t; el.appendChild(n);
-  });
-}
-
-/* ========== WEATHER (Open-Meteo - no API key) ========== */
-async function loadWeather(){
-  const out = document.getElementById('weatherContent');
-  out.textContent = 'Loading weather...';
-  try{
-    // Srinagar coords: lat 34.0837 lon 74.7973
-    const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=34.0837&longitude=74.7973&current_weather=true');
-    if(!res.ok) throw new Error('weather API failed');
-    const j = await res.json();
-    const w = j.current_weather;
-    out.innerHTML = `<div style="display:flex;gap:12px;align-items:center"><div style="font-size:28px;font-weight:700">${Math.round(w.temperature)}°C</div><div class="muted">Wind ${w.windspeed} m/s<br/>WMO ${w.weathercode}</div></div>`;
-  }catch(e){
-    out.textContent = 'Weather not available';
-    console.warn(e);
-  }
-}
-
-/* ========== OPTIONAL LIVE NEWS (Inshorts) - merges a few live items ========== */
-async function fetchLiveNews(){
-  try{
-    const res = await fetch('https://inshortsapi.vercel.app/news?category=national');
-    if(!res.ok) throw new Error('no live news');
-    const j = await res.json();
-    if(Array.isArray(j.data)){
-      const live = j.data.slice(0,4).map(a=>({title:a.title,desc:a.content,publishedAt:new Date().toISOString(),url:a.readMoreUrl||'#',source:'Inshorts',category:'latest'}));
-      for(const it of live.reverse()){
-        if(!mergedFeed.find(x=>x.title && x.title===it.title)) mergedFeed.unshift(it);
-      }
-    }
-  }catch(e){
-    // ignore live news failure silently
-  }
-}
-
-/* ========== SHARE LINKS ========== */
-function updateShare(){
-  const u = encodeURIComponent(location.href);
-  const t = encodeURIComponent('Taaza Jammu & Kashmir news — check this out!');
-  document.getElementById('shareX').href = `https://twitter.com/intent/tweet?text=${t}&url=${u}`;
-  document.getElementById('shareWA').href = `https://api.whatsapp.com/send?text=${t}%20${u}`;
-}
-
-/* ========== ORCHESTRATOR ========== */
-function refreshAll(first=false){
-  document.getElementById('updated').textContent = 'Updating...';
-  buildMerged();
-  fetchLiveNews().finally(()=>{
-    renderFeed(true);
-    renderJobs();
-    computeTrending();
-    loadWeather();
-    updateShare();
-    document.getElementById('updated').textContent = 'Updated ' + new Date().toLocaleTimeString();
-    if(first) window.scrollTo({top:0,behavior:'smooth'});
-  });
-}
-
-/* ========== UI HOOKS ========== */
-document.getElementById('refresh').addEventListener('click', ()=>refreshAll(true));
-document.getElementById('loadMore').addEventListener('click', ()=>renderFeed(false));
-document.getElementById('year').textContent = new Date().getFullYear();
-
-/* tab filtering (optional) */
-// if you later add tabs, you can filter mergedFeed by category
-
-/* ========== INIT ========== */
-refreshAll(true);
-setInterval(()=>refreshAll(false), POLL_MS);
-window.addEventListener('scroll', ()=>{ if((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 600)) renderFeed(false); });
-
-</script>
+<script src="app.js"></script>
 </body>
 </html>
-
