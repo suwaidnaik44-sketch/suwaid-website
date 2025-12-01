@@ -1,29 +1,17 @@
 <!doctype html>
 <html lang="hi">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QF4K101LY9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-QF4K101LY9');
-</script>
-<!doctype html>
-<html lang="hi">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>JK Fast News — Breaking • Weather • Jobs • Alerts</title>
-<link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JK Mega News — Breaking • Weather • Jobs • Alerts</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <div class="brand">
-        <h1>Jammu & Kashmir Live</h1>
-        <div class="muted small">Breaking • Latest • Weather • Jobs • Alerts</div>
+    <header class="site-header">
+      <div>
+        <h1>JK Mega News</h1>
+        <div class="muted">Breaking • Weather • Jobs • Alerts (Roman)</div>
       </div>
       <div class="controls">
         <button id="refresh" class="btn">Refresh</button>
@@ -31,45 +19,47 @@
       </div>
     </header>
 
-    <div class="grid">
-      <main>
-        <div id="topAd" class="ad">Ad placeholder — replace with AdSense</div>
-        <section id="feed" class="feed" aria-live="polite"></section>
+    <main class="grid">
+      <section class="left">
+        <div id="featured"></div>
+        <div id="feed" class="feed"></div>
         <button id="loadMore" class="loadmore">Load more</button>
-      </main>
+      </section>
 
-      <aside>
-        <div id="weatherWidget" class="widget">
-          <h4>Weather — Srinagar</h4>
+      <aside class="right">
+        <div class="widget" id="weatherWidget">
+          <h3>Weather — Srinagar</h3>
           <div id="weatherContent" class="muted">Loading weather…</div>
         </div>
 
         <div class="widget">
-          <h4>Jobs • Latest</h4>
+          <h3>Jobs — Latest</h3>
           <div id="jobs" class="jobs muted">Loading jobs…</div>
-          <a id="jobsMore" href="#" class="muted">More jobs</a>
+          <a id="jobsMore" href="#" class="small">More jobs</a>
         </div>
 
         <div class="widget">
-          <h4>Trending</h4>
+          <h3>Trending</h3>
           <div id="trending" class="tags"></div>
         </div>
 
         <div class="widget">
-          <h4>Share</h4>
+          <h3>Share</h3>
           <div>
             <a id="shareX" class="share" href="#" target="_blank">Share on X</a>
             <a id="shareWA" class="share" href="#" target="_blank">Share on WhatsApp</a>
           </div>
         </div>
 
-        <div class="ad">Side Ad placeholder</div>
+        <div class="ad small">Ad placeholder — replace with AdSense</div>
       </aside>
-    </div>
+    </main>
 
-    <footer>© <span id="year"></span> JK Fast News — Hosted on GitHub Pages</footer>
+    <footer class="site-footer">
+      © <span id="year"></span> JK Mega News — Hosted on GitHub Pages
+    </footer>
   </div>
 
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
