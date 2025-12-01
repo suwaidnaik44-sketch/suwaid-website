@@ -1,0 +1,72 @@
+{
+  "breaking": [
+    {
+      "title": "Srinagar Main Breaking News",
+      "desc": "Lal Chowk me security alert jari. Police ne area ko seal kiya.",
+      "time": "Just now",
+      "url": ""
+    },
+    {
+      "title": "Jammu Highway Breaking",
+      "desc": "Jammu–Srinagar highway landslide ke wajah se temporarily band.",
+      "time": "2 min ago",
+      "url": ""
+    }
+  ],
+  "latest": [
+    {
+      "title": "Tourist Rush in Gulmarg",
+      "desc": "Baraf girne ke baad Gulmarg me tourist footfall double ho gaya.",
+      "time": "20 min ago",
+      "url": ""
+    },
+    {
+      "title": "Kashmir Apple Market Rates",
+      "desc": "Aaj market rate update hue; local mandi me fluctuation dekhne ko mili.",
+      "time": "45 min ago",
+      "url": ""
+    }
+  ],
+  "weather": [
+    {
+      "title": "Snowfall Alert – Gulmarg & Sonamarg",
+      "desc": "Aaj raat se heavy snowfall ka warning jari kiya gaya.",
+      "time": "10:00 AM",
+      "url": ""
+    },
+    {
+      "title": "Srinagar Temperature Drop",
+      "desc": "Minimum temp -3°C record hua subah ke time.",
+      "time": "9:30 AM",
+      "url": ""
+    }
+  ],
+  "jobs": [
+    {
+      "title": "JKSSB New Recruitment 2025",
+      "desc": "Clerk, Assistant, Supervisor — total 1800 posts open. Online apply karein.",
+      "time": "Today",
+      "url": "https://jkssb.nic.in/"
+    },
+    {
+      "title": "JKPSC Lecturer Posts",
+      "desc": "Science & Arts stream me 350 vacancies announced. Eligibility details site par.",
+      "time": "Yesterday",
+      "url": "https://jkpsc.nic.in/"
+    }
+  ],
+  "alerts": [
+    {
+      "title": "School Winter Vacation Notice",
+      "desc": "Class 1–8 ke liye schools 2 weeks ke liye band.",
+      "time": "Today 9:00 AM",
+      "url": ""
+    },
+    {
+      "title": "Electricity Shutdown – Srinagar",
+      "desc": "Maintenance ke kaaran 3 ghante bijli band rahegi.",
+      "time": "Today 8:30 AM",
+      "url": ""
+    }
+  ]
+}
